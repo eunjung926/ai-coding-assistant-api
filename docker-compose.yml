@@ -1,0 +1,14 @@
+services:
+  api:
+    build:
+      context: .
+      args:
+        HF_TOKEN: ${HF_TOKEN:-}
+    image: ai-coding-assistant-api:latest
+    ports:
+      - "5059:5059"
+    gpus: all
+    environment:
+      - HF_HOME=/app/.cache/huggingface
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN:-}
+    shm_size: "2gb"

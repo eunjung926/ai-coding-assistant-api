@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+
+# Model cache
+.cache/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# HuggingFace baked model (Docker build artifact)
+baked/
+
+# Training outputs
+training/outputs/
+wandb/
